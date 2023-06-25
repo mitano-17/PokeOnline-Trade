@@ -46,15 +46,15 @@ header .burger_menu #nav_menu{
 }
 
 header .burger_menu #nav_menu:hover{
-	background-color: rgb(74, 121, 133);
-	transition: 0.25s;
+	background-color: rgb(53, 82, 192);
+	transition: 0.50s;
 	cursor: pointer;
 }
 
 header .burger_menu #burger_contents_div{
 	display: none;
 	position: fixed;
-	background-color: rgb(74, 121, 133);
+	background-color:  rgb(64, 103, 198);
 	width: 260px;
 	height: 100%;
 }
@@ -81,8 +81,8 @@ header .burger_menu #burger_contents_div #burger_contents{
 }
 
 #burger_contents_div a:hover{
-	background-color: #4cb9ad;
-	transition: 0.25s;
+	background-color: cornflowerblue;
+	transition: 0.50s;
 }
 
 header .burger_menu:hover #burger_contents_div{
@@ -90,7 +90,7 @@ header .burger_menu:hover #burger_contents_div{
 }
 
 header .burger_menu:hover #nav_menu{
-	background-color: rgb(74, 121, 133);
+	background-color: cornflowerblue;
 }
 
 header .burger_menu i{
@@ -99,15 +99,13 @@ header .burger_menu i{
 
 .menu_logo{
 	margin:  5px;
-	margin-top: 10px;
-	margin-left: 20px;
 }
 
 header .logo{
 	float:  left;
 	margin:  5px;
-	margin-left: 100px;
-	margin-top: 10px;
+	margin-left: 85px;
+	margin-top: 5px;
 }
 
 header .search{
@@ -116,12 +114,12 @@ header .search{
 	padding:  5px;
 }
 
-header .search .search_box{
+header .search .search_box {
 	float:  left;
 	width:  400px;
 	height:  40px;
-	background-color: rgb(74, 121, 133);
-	background-image: url("search.png");
+	background-color: rgb(127, 173, 255);
+	background-image: url("./assets/search.png");
 	background-size: 25px 25px;
 	background-repeat: no-repeat;
 	background-position: 8px 8px;
@@ -132,51 +130,41 @@ header .search .search_box{
 	padding-left: 35px;
 }
 
-header .button{
-	text-decoration: none;
-	color:  white;
-	background-color: rgb(234, 66, 121);
-	float:  left;
-	margin:  5px;
-	margin-top: 10px;
-	padding:  10px 20px;
-	margin-left:  400px;
-}
-
-header .button:hover{
-	background-color: rgb(180, 54, 128);
-	transition:  0.25s;
-}
-
-header .button:active{
-	color:  white;
-	background-color: #4cb9ad;
-	position: relative;
-	left: 2px;
-	top: 2px;
+header .search .search_box:focus{
+	background-color: lightyellow;
+	color: rgb(133, 133, 133);
+	background-image: url("./assets/search_focus.png");
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: 6px 6px;
+	border: solid;
+	border-color: transparent;
+	font-size: 18px;
+	text-indent: 10px;
+	padding-left: 35px;
 }
 
 header .dropdown_menu{
  	cursor: pointer;
  	margin-right: 30px;
- 	border-right: 2px solid rgb(74, 121, 133);
- 	border-left: 2px solid rgb(74, 121, 133);
 }
 
 header #username{
 	float:  right;
-	margin:  5px;
-	margin-right: 30px;
+	margin:  10px;
+	margin-right: 60px;
 	margin-top: 15px;
 	padding:  5px;
 	font-size: 18px;
+	color: white;
+	word-wrap: break-word;
 }
 
 header #profile_photo{
 	float:  right;
 	margin:  5px;
 	margin-top: 10px;
-	margin-right: -3px;
+	margin-left: 20px;
 	width: 40px;
 	height: 40px;
 	object-fit: cover;
@@ -186,17 +174,17 @@ header #profile_photo{
 	float: right;
 	width: 240px;
 	height: 62px;
-	background-color: #4cb9ad;
+	background-color: cornflowerblue;
 }
 
 .dropdown_menu:hover{
-	background-color: rgb(74, 121, 133);
+	background-color: rgb(64, 103, 198);
 }
 
 .dropdown_menu #dropdown_contents{
 	display:  none;
 	position: absolute;
-	background-color: rgb(74, 121, 133);
+	background-color: rgb(64, 103, 198);
 	width: 240px;
 	margin-top: 62px;
 }
@@ -209,7 +197,7 @@ header #profile_photo{
 }
 
 #dropdown_contents a:hover{
-	background-color: #4cb9ad;
+	background-color: cornflowerblue;
 }
 
 
@@ -218,7 +206,7 @@ header #profile_photo{
 }
 
 .dropdown_menu:hover #user_menu {
- 	background-color: rgb(74, 121, 133);
+ 	background-color: cornflowerblue;
 }
 
 #logo_icon img{
@@ -233,12 +221,12 @@ header #profile_photo{
 	margin-bottom: 2px;
 }
 
-form{
+#login_reg_form{
 	background-color: rgb(255, 255, 255);
 	padding: 50px;
 	display: flex;
   	justify-content: center;
-  	width: 300px;
+  	width: 450px;
   	margin: auto;
   	margin-top: 5%;
   	margin-bottom: 5%;
