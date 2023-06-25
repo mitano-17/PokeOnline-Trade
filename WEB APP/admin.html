@@ -10,9 +10,51 @@
 
 	<body>
 		<header>
-			<span id="logo_icon"><img src="./assets/icon_white.png"></span>
-			<span id="logo_word"><img src="./assets/logo_word_white.png"></span>
+			<!--LEFT-->
+			<div class = "burger_menu">
+				<div id = "nav_menu">
+					<i class="fa fa-bars"></i>
+				</div>
+				<!--BURGER MENU-->
+				<div id ="burger_contents_div">
+					<i class="fa fa-bars"></i>
+					<img src = "./assets/logo_white.png" width = 120px class = "menu_logo">
+					<div id = "burger_contents">
+						<a href="#">Home</a>
+						<a href="#">About Us</a>
+						<a href="#">Contact Us</a>
+						<a href="#">Terms of Service</a>
+						<a href="#">Privacy Policy</a>
+					</div>
+				</div>
+			</div>
+			
+			<a href="#"><img src = "./assets/logo_white.png" width = 120px class = "logo"></a>
+
+			<!--SEARCH BAR-->
+			<form class = "search">
+				<input type = "text" placeholder = "Search..." name = "search_bar" class = "search_box">
+			</form>
+
+			<!--RIGHT-->
+			<div class = "dropdown_menu">
+				<div id = "user_menu">
+					<h3 id = "username">username</h3>
+
+					<img src = "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg" id = "profile_photo">
+				</div>
+
+				<!-- DROPDOWN MENU -->
+				<div id ="dropdown_contents">
+					<a href="#">Profile</a>
+					<a href="#">Gallery</a>
+					<a href="#">Favourites</a>
+					<a href="#">Settings</a>
+					<a href="#">Log out</a>
+				</div>
+			</div>
 		</header>
+
 		<footer>
 			<p>©PokeOnline</p>
 		</footer>
