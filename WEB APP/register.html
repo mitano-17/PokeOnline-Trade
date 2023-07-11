@@ -14,7 +14,7 @@
 	</head>
 
 	<body>
-		<form action="login.html" method="post" id="login_reg_form">
+		<form action="login.html" method="post" id="login_reg_form" onsubmit="return submitFunction(event)">
 		  <div class="container">
 		  	<div class="logo_image">
 		  		<img src="./assets/logo_w_catchphrase.png">
@@ -72,6 +72,7 @@
 		const isPNG = check([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
 		const isJPEG = check([0xff, 0xd8, 0xff]);
 		const realFileElement = document.querySelector("#realFileType");
+		var isSubmittable = false;
 
 		async function handleChange(event) {
 			const file = event.target.files[0];
@@ -84,6 +85,19 @@
 					.attr('src', event.target.result)
 					.width(100)
 					.height(100);
+				isSubmittable = true;
+			}
+			console.log(isSubmittable);
+		}
+
+		// create a function that onSubmit of form, check if the file is an image file, if not, prevent the form from submitting
+		// if it is an image file, submit the form
+		function submitFunction() {
+			if (isSubmittable) {
+				document.getElementById("login_reg_form").submit();
+			} else {
+				alert("Please choose a PNG or JPEG file.");
+				return false;
 			}
 		}
 	</script>
