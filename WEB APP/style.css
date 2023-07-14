@@ -299,3 +299,7 @@ footer > p {
 	width: 100px;
 	margin-top: 20px;
 }
+
+#realFileType {
+	color: red
+}
