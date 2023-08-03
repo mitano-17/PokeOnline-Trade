@@ -78,6 +78,8 @@
 			const file = event.target.files[0];
 			const buffers = await readBuffer(file, 0, 8);
 			const uint8Array = new Uint8Array(buffers);
+			isSubmittable = false;
+			console.log("Changed file")
 			realFileElement.innerText = `${isPNG(uint8Array) ? "" : isJPEG(uint8Array) ? "" : "File chosen is not an image. Please choose a PNG or JPEG file."}`;
 			if (isPNG(uint8Array) || isJPEG(uint8Array)) {
 				readURL(event.target);
