@@ -237,7 +237,7 @@ header #profile_photo{
   	border-radius: 15px;
 }
 
-input{
+.container > input{
 	background-color: rgb(245, 245, 245);
 	border: none;
 	margin: 10px 0px 10px 0px;
@@ -246,7 +246,7 @@ input{
 	border-radius: 5px;
 }
 
-input:focus {
+.container > input:focus {
 	background-color: lightyellow;
 	border-color: transparent;
 }
@@ -309,7 +309,7 @@ button:hover{
 footer{
 	background-color: rgb(15, 15, 15);
 	height: 40px;
-	position: fixed;
+	margin-top: 80px;
 	left: 0;
 	bottom: 0;
 	width: 100%;
@@ -327,5 +327,156 @@ footer > p {
 }
 
 #realFileType {
-	color: red
+	color: red;
+}
+
+.display{
+	background-color: cornflowerblue;
+	margin-top: 80px;
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 15px;
+}
+
+.display > h1{
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 10px;
+}
+
+.division{
+	display: flex;
+}
+
+.left_div{
+	display: block;
+	width: 30%;
+	padding: 30px;
+	background-color: rgb(245, 245, 245);
+	border-bottom-left-radius: 15px;
+}
+
+#photo_submission{
+	width: 100%;
+}
+
+.right_div{
+	display: block;
+	width: 70%;
+	padding: 30px;
+	background-color: rgb(255, 255, 255);
+	border-bottom-right-radius: 15px;
+}
+
+.submit_form input{
+	background-color: rgb(245, 245, 245);
+	border: none;
+	margin: 10px 0px 10px 0px;
+	padding: 10px;
+	width: 320px;
+	border-radius: 5px;
+}
+
+.submit_form input:hover{
+	background-color: lightyellow;
+	border-color: transparent;
+}
+
+input[type = text]:focus {
+    background-color: lightyellow;
+}
+
+.submit_form select{
+	background-color: rgb(245, 245, 245);
+	border: none;
+	margin: 10px 0px 10px 0px;
+	padding: 10px;
+	width: 100px;
+	border-radius: 5px;
+}
+
+.submit_form select:hover{
+	background-color: lightyellow;
+}
+
+#form_div1{
+	display: flex;
+}
+
+#form_div1 > div {
+	width: 50%;
+	margin: 10px;
+}
+
+#moves_list{
+	display: flex;
+}
+
+#moves_list > div{
+	width: 50%;
+	margin: 10px;
+}
+
+#ev_list{
+	display: flex;
+}
+
+#ev_list > div{
+	width: 16.67%;
+	margin: 10px;
+}
+
+.ev_hp {
+	width: 100px
+}
+
+#iv_list{
+	display: flex;
+}
+
+#iv_list > div{
+	width: 16.67%;
+	margin: 10px;
+}
+
+#form_div2{
+	display: flex;
+}
+
+#form_div2 > div{
+	width: 50%;
+	margin: 10px;
+}
+
+#buttons{
+	display:  flex;
+	justify-content: right;
+	gap: 20px;
+	position: static;
+}
+
+#cancel_button{
+	text-align: center;
+	text-decoration: none;
+	background-color: transparent;
+	color: cornflowerblue;
+	
+	border: solid;
+	border-color: cornflowerblue;
+	border-radius: 5px;
+	padding: 10px;
+	width: 150px;
+}
+
+#cancel_button:hover{
+	background-color: cornflowerblue;
+	color: white;
+	transition:  0.25s;
+	cursor: pointer;
+}
+
+.pokemon_type_dropdown, .pokemon_gender_dropdown{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
