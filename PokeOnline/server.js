@@ -17,9 +17,9 @@ const loginLimit = rateLimit({
 app.use("/login.html", loginLimit)
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '123',
+  host: 'localhost:3306',
+  user: 'pokeuser',
+  password: '1234',
   database: 'pokemon'
 });
 
