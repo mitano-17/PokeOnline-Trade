@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PokeOnline: Trade | Register</title>
+		<link rel="icon" type="image/x-icon" href="./assets/icon.png">
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="slideshow.jsp"></script>
+		<script type="text/javascript" src="upload_avatar.jsp"></script>
+	</head>
+
+	<body>
+		<form action="/login.html" method="post" id="login_reg_form">
+		  <div class="container">
+		  	<div class="logo_image">
+		  		<img src="./assets/logo_w_catchphrase.png">
+		  	</div>
+		  	<input type="text" placeholder="Enter Full Name" name="full_name" required>
+		    <br>
+		    <input type="email" placeholder="Enter Email" name="email" required>
+		    <br>
+		    <input type="tel" placeholder="Enter Phone Number" name="phone" required>
+		    <br>
+		    <input type="password" placeholder="Enter Password" name="psw" required>
+		    <br>
+		    <input type="password" placeholder="Re-Enter Password" name="psw2" required>
+		    <br>
+		    <div class="profile_image">
+		    	<input type='file' onchange="readURL(this);" name="myfile" id="myfile"/>
+		    	<label for="myfile">Your Profile Photo:</label><br>
+    			<img id="profile_photo" src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"/>
+		    </div>
+		    <div class="login">
+		    	<p>Already have account? <a href="login.html">Sign In</a></p>
+			</div>
+		    <br>
+		    <button type="submit">Create Account</button>
+		  </div>
+		</form>
+		<footer>
+			<p>©PokeOnline</p>
+		</footer>
+	</body>
+
+	
+</html>

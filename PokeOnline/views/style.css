@@ -1,0 +1,301 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: rgb(233, 233, 233);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+html{
+	color: rgb(133, 133, 133);
+	font-family: "Open Sans", sans-serif;
+}
+
+/**header{
+	display: inline-block;
+	background-color: cornflowerblue;
+	height: 60px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}*/
+
+header{
+	overflow: hidden;
+	background-color: cornflowerblue;
+	width:  100%;
+	height:  60px;
+}
+
+header .burger_menu #nav_menu{
+	color: white;
+	float: left;
+	font-size: 30px;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	position: fixed;
+}
+
+header .burger_menu #nav_menu:hover{
+	background-color: rgb(53, 82, 192);
+	transition: 0.50s;
+	cursor: pointer;
+}
+
+header .burger_menu #burger_contents_div{
+	display: none;
+	position: fixed;
+	background-color:  rgb(64, 103, 198);
+	width: 260px;
+	height: 100%;
+}
+
+header .burger_menu #burger_contents_div i{
+	margin-top: 15px;
+	color: white;
+	float: left;
+	font-size: 30px;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+}
+
+header .burger_menu #burger_contents_div #burger_contents{
+	margin-top: 20px;
+}
+
+#burger_contents_div a{
+	color: white;
+	padding: 20px 20px;
+	text-decoration: none;
+	display: block;
+}
+
+#burger_contents_div a:hover{
+	background-color: cornflowerblue;
+	transition: 0.50s;
+}
+
+header .burger_menu:hover #burger_contents_div{
+	display: block;
+}
+
+header .burger_menu:hover #nav_menu{
+	background-color: cornflowerblue;
+}
+
+header .burger_menu i{
+	margin-top: 15px;
+}
+
+.menu_logo{
+	margin:  5px;
+}
+
+header .logo{
+	float:  left;
+	margin:  5px;
+	margin-left: 85px;
+	margin-top: 5px;
+}
+
+header .search{
+	float:  left;
+	margin:  5px 10px 5px 50px;
+	padding:  5px;
+}
+
+header .search .search_box {
+	float:  left;
+	width:  400px;
+	height:  40px;
+	background-color: rgb(127, 173, 255);
+	background-image: url("./assets/search.png");
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: 8px 8px;
+	border: none;
+	color:  white;
+	font-size: 18px;
+	text-indent: 10px;
+	padding-left: 35px;
+}
+
+header .search .search_box:focus{
+	background-color: lightyellow;
+	color: rgb(133, 133, 133);
+	background-image: url("./assets/search_focus.png");
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: 6px 6px;
+	border: solid;
+	border-color: transparent;
+	font-size: 18px;
+	text-indent: 10px;
+	padding-left: 35px;
+}
+
+header .dropdown_menu{
+ 	cursor: pointer;
+ 	margin-right: 30px;
+}
+
+header #username{
+	float:  right;
+	margin:  10px;
+	margin-right: 60px;
+	margin-top: 15px;
+	padding:  5px;
+	font-size: 18px;
+	color: white;
+	word-wrap: break-word;
+}
+
+header #profile_photo{
+	float:  right;
+	margin:  5px;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+}
+
+.dropdown_menu{
+	float: right;
+	width: 240px;
+	height: 62px;
+	background-color: cornflowerblue;
+}
+
+.dropdown_menu:hover{
+	background-color: rgb(64, 103, 198);
+}
+
+.dropdown_menu #dropdown_contents{
+	display:  none;
+	position: absolute;
+	background-color: rgb(64, 103, 198);
+	width: 240px;
+	margin-top: 62px;
+}
+
+#dropdown_contents a{
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+#dropdown_contents a:hover{
+	background-color: cornflowerblue;
+}
+
+
+.dropdown_menu:hover #dropdown_contents {
+ 	display: block;
+}
+
+.dropdown_menu:hover #user_menu {
+ 	background-color: cornflowerblue;
+}
+
+#logo_icon img{
+	width: 30px;
+	margin-top: 12px;
+	margin-left: 10px;
+}
+
+#logo_word img{
+	width: 120px;
+	margin-left: 5px;
+	margin-bottom: 2px;
+}
+
+#login_reg_form{
+	background-color: rgb(255, 255, 255);
+	padding: 50px;
+	display: flex;
+  	justify-content: center;
+  	width: 450px;
+  	margin: auto;
+  	margin-top: 5%;
+  	margin-bottom: 5%;
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-content: center;
+  	border-radius: 15px;
+}
+
+input{
+	background-color: rgb(245, 245, 245);
+	border: none;
+	margin: 10px 0px 10px 0px;
+	padding: 10px;
+	width: 320px;
+	border-radius: 5px;
+}
+
+input:focus {
+	background-color: lightyellow;
+	border-color: transparent;
+}
+
+a{
+	text-decoration: none;
+	color: cornflowerblue;
+}
+
+button{
+	font-weight: bold;
+	border: none;
+	width: 340px;
+	padding: 10px;
+	background-color: cornflowerblue;
+	color: white;
+	border-radius: 5px;
+}
+
+button:hover{
+	cursor: pointer;
+	background-color: rgb(53, 82, 192);
+	transition: 0.50s;
+}
+
+.logo_image{
+	margin-bottom: 20px;
+}
+
+.logo_image > img{
+	width: 300px;
+}
+
+footer{
+	background-color: rgb(15, 15, 15);
+	height: 40px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+footer > p {
+	margin-top: -0.05%;
+	padding: 5px;
+	padding-left: 10px;
+}
+
+#profile_photo{
+	width: 100px;
+	margin-top: 20px;
+}
