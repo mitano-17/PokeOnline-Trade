@@ -16,6 +16,7 @@ const loginLimit = rateLimit({
 
 app.use("/login.html", loginLimit)
 
+// NOTICE: MAKE SURE TO CHANGE ACCDG TO YOUR SYSTEM
 const connection = mysql.createConnection({
   host: 'localhost:3306',
   user: 'pokeuser',
