@@ -493,4 +493,18 @@ input[type = text]:focus {
 	padding-right: 15px;
 	color: white;
 	font-size: 20px;
+	border-radius: 5px;
+}
+
+#delete:hover {
+	background-color: rgb(177, 65, 77);
+	transition: 0.25s;
+}
+
+#delete:active{
+	color:  rgb(177, 65, 77);
+	background-color: white;
+	position: relative;
+	left: 2px;
+	top: 2px;
 }
