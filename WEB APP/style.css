@@ -347,6 +347,7 @@ footer > p {
 
 .division{
 	display: flex;
+	background-color: white;
 }
 
 .left_div{
@@ -507,4 +508,15 @@ input[type = text]:focus {
 	position: relative;
 	left: 2px;
 	top: 2px;
+}
+
+#users{
+	background-color: lightyellow;
+	text-align: center;
+	width: 100%;
+}
+
+th{
+	background-color: lightblue;
+	padding: 20px;
 }
