@@ -516,7 +516,30 @@ input[type = text]:focus {
 	width: 100%;
 }
 
+#users button:hover{
+	transition: 0s;
+	position: relative;
+	left: 2px;
+	top: 2px;
+}
+
 th{
 	background-color: lightblue;
 	padding: 20px;
+}
+
+#make_gym_leader{
+	width: 200px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+#remove_membership{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
