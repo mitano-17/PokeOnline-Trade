@@ -511,7 +511,7 @@ input[type = text]:focus {
 }
 
 #users{
-	background-color: lightyellow;
+	background-color: rgb(245, 245, 245);
 	text-align: center;
 	width: 100%;
 }
@@ -527,9 +527,17 @@ input[type = text]:focus {
 	background-color: white;
 }
 
+#users tr:hover{
+	background-color: white;
+}
+
 th{
-	background-color: lightblue;
-	padding: 20px;
+	background-color: rgb(127, 173, 255);
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom-style: hidden;
+	border-top-style: hidden;
 }
 
 #make_gym_leader{
