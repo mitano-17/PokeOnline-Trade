@@ -510,24 +510,24 @@ input[type = text]:focus {
 	top: 2px;
 }
 
-#users{
+#users, #submissions{
 	background-color: rgb(245, 245, 245);
 	text-align: center;
 	width: 100%;
 }
 
-#users button:hover{
+#users, #submissions button:hover{
 	transition: 0s;
 	position: relative;
 	left: 2px;
 	top: 2px;
 }
 
-#users button:active{
+#users, #submissions button:active{
 	background-color: white;
 }
 
-#users tr:hover{
+#users, #submissions tr:hover{
 	background-color: white;
 }
 
@@ -540,7 +540,7 @@ th{
 	border-top-style: hidden;
 }
 
-#make_gym_leader{
+#make_gym_leader, #approve{
 	width: 200px;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -550,7 +550,7 @@ th{
 	background-color: lightseagreen;
 }
 
-#make_gym_leader:active{
+#make_gym_leader:active, #approve:active{
 	color: lightseagreen;
 }
 
@@ -562,6 +562,15 @@ th{
 	background-color: indianred;
 }
 
-#remove_membership:active{
+#reject{
+	width: 200px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: indianred;
+}
+
+#remove_membership:active, #reject:active{
 	color: indianred;
 }
