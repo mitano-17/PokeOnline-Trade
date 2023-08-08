@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script type="text/javascript" src="upload_pokemon_image.jsp"></script>
 		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="error_display.jsp"></script>
 	</head>
 
 	<body>
@@ -64,6 +65,12 @@
 				</div>
 			</div>
 		</header>
+
+		<!-- ERROR MESSAGES DISPLAY -->
+		<div class="error_msg">
+			<span class="close_button">&times;</span>
+			<strong>Error:</strong> There is something missing in your submission. Please fill in all the details before submitting. 
+		</div>
 
 		<!-- SUBMISSION FORM -->
 		<div class = "display">
@@ -303,5 +310,20 @@
 		<footer>
 			<p>©PokeOnline</p>
 		</footer>
+
+		<!-- DISPLAY ERROR MESSAGES -->
+		<script>
+			var close = document.getElementsByClassName("close_button");
+			var i;
+
+			for (i = 0; i < close.length; i++) {
+			  close[i].onclick = function(){
+			    var div = this.parentElement;
+			    div.style.opacity = "0";
+			    setTimeout(function(){ div.style.display = "none"; }, 600);
+			  }
+			}
+		</script>
+
 	</body>
 </html>
