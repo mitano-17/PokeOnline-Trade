@@ -510,24 +510,24 @@ input[type = text]:focus {
 	top: 2px;
 }
 
-#users, #submissions{
+#submissions, #users{
 	background-color: rgb(245, 245, 245);
 	text-align: center;
 	width: 100%;
 }
 
-#users, #submissions button:hover{
+#submissions button:hover, #users button:hover{
 	transition: 0s;
 	position: relative;
 	left: 2px;
 	top: 2px;
 }
 
-#users, #submissions button:active{
+#submissions button:active,  #users button:active{
 	background-color: white;
 }
 
-#users, #submissions tr:hover{
+#submissions tr:hover, #users tr:hover{
 	background-color: white;
 }
 
