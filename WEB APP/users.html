@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="error_display.jsp"></script>
 	</head>
 
 	<body>
@@ -63,15 +65,18 @@
 		</header>
 
 		<!-- ERROR MESSAGES DISPLAY -->
-		
-		<div class="alert_msg">
-			<span class="close_button">&times;</span>
-			<strong>Success!</strong> Demoted trainer to basic membership. 
+		<div id="demote_msg" class="alert" role="alert">
+			<div class="alert_msg">
+				<span class="close_button">&times;</span>
+				<strong>Success!</strong> Demoted trainer to basic membership. 
+			</div>
 		</div>
 
-		<div class="alert_msg">
-			<span class="close_button">&times;</span>
-			<strong>Success!</strong> Promoted trainer to gym leader membership. 
+		<div id="promote_msg" class="alert" role="alert">
+			<div class="alert_msg">
+				<span class="close_button">&times;</span>
+				<strong>Success!</strong> Promoted trainer to gym leader membership. 
+			</div>
 		</div>
 
 		<!-- CONTENTS -->
@@ -92,8 +97,8 @@
 					    <td>Brendan</td>
 					    <td>Basic</td>
 					    <td>
-					    	<button class="make_gym_leader">Make gym leader</button>
-					    	<button class="remove_membership">Remove gym leader membership</button>
+					    	<button id="make_gym_leader" class="make_gym_leader" data-dismiss="alert">Make gym leader</button>
+					    	<button id="remove_membership" class="remove_membership" data-dismiss="alert">Remove gym leader membership</button>
 					    </td>
 				  	</tr>
 
@@ -102,8 +107,8 @@
 					    <td>Lucas</td>
 					    <td>Basic</td>
 					    <td>
-					    	<button class="make_gym_leader">Make gym leader</button>
-					    	<button class="remove_membership">Remove gym leader membership</button>
+					    	<button id="make_gym_leader" class="make_gym_leader" data-dismiss="alert">Make gym leader</button>
+					    	<button id="remove_membership" class="remove_membership" data-dismiss="alert">Remove gym leader membership</button>
 					    </td>
 				  	</tr>
 
@@ -112,8 +117,8 @@
 					    <td>Calem</td>
 					    <td>Basic</td>
 					    <td>
-					    	<button class="make_gym_leader">Make gym leader</button>
-					    	<button class="remove_membership">Remove gym leader membership</button>
+					    	<button id="make_gym_leader" class="make_gym_leader" data-dismiss="alert">Make gym leader</button>
+					    	<button id="remove_membership" class="remove_membership" data-dismiss="alert">Remove gym leader membership</button>
 					    </td>
 				  	</tr>
 
@@ -122,8 +127,8 @@
 					    <td>Brock</td>
 					    <td>Gym Leader</td>
 					    <td>
-					    	<button class="make_gym_leader">Make gym leader</button>
-					    	<button class="remove_membership">Remove gym leader membership</button>
+					    	<button id="make_gym_leader" class="make_gym_leader" data-dismiss="alert">Make gym leader</button>
+					    	<button id="remove_membership" class="remove_membership" data-dismiss="alert">Remove gym leader membership</button>
 					    </td>
 				  	</tr>
 
@@ -132,8 +137,8 @@
 					    <td>Misty</td>
 					    <td>Gym Leader</td>
 					    <td>
-					    	<button class="make_gym_leader">Make gym leader</button>
-					    	<button class="remove_membership">Remove gym leader membership</button>
+					    	<button id="make_gym_leader" class="make_gym_leader" data-dismiss="alert">Make gym leader</button>
+					    	<button id="remove_membership" class="remove_membership" data-dismiss="alert">Remove gym leader membership</button>
 					    </td>
 				  	</tr>
 				</table>
