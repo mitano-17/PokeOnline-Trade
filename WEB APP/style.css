@@ -585,6 +585,16 @@ th{
 	margin-bottom: -15px;
 }
 
+.alert_msg{
+	padding: 20px;
+	background-color: #04AA6D;
+	color: white;
+	opacity: 1;
+	transition: opacity 0.6s;
+	margin: 20px;
+	margin-bottom: -15px;
+}
+
 .close_button {
 	margin-left: 15px;
 	color: white;
