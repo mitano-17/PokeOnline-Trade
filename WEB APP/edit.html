@@ -100,9 +100,6 @@
 
 					<p class = "reminder" style="margin-top: 10px;">Allowable: JPEG, PNG</p>
 
-					<div id="delete_button">
-						<a href = "#" id = "delete"><i class="fa fa-trash"></i></a>
-					</div>
 				</div>
 
 				<div class = "right_div">
@@ -186,128 +183,13 @@
 							</div>
 						</div>
 
-						<hr>
-
-						<label>Moves: </label><br>
-
-						<div id="moves_list">
-							<div>
-								<label for="pokemon_move_1">Move 1</label>
-								<input type = "text" placeholder = "Move 1" name = "pokemon_move_1" class = "pokemon_move_1" style="margin-bottom: 10px">
-								<br>
-								<label for="pokemon_move_2">Move 2</label>
-								<input type = "text" placeholder = "Move 2" name = "pokemon_move_2" class = "pokemon_move_2">
-							</div>
-
-							<div>
-								<label for="pokemon_move_3">Move 3</label>
-								<input type = "text" placeholder = "Move 3" name = "pokemon_move_3" class = "pokemon_move_3" style="margin-bottom: 10px">
-								<br>
-								<label for="pokemon_move_4">Move 4</label>
-								<input type = "text" placeholder = "Move 4" name = "pokemon_move_4" class = "pokemon_move_4">
-							</div>
-						</div>
-
-						<hr>
-
-						<label>EV: </label><br>
-
-						<div id="ev_list">
-							<div>
-								<label for="ev_hp">HP</label>
-								<input type = "text" placeholder = "0-31" name = "ev_hp" class = "ev_hp" style="width: 100px">
-							</div>
-								<br>
-							<div>
-								<label for="ev_attack">Attack</label>
-								<input type = "text" placeholder = "0-31" name = "ev_attack" class = "ev_attack" style="width: 100px">
-							</div>
-								<br>
-							<div>
-								<label for="ev_defense">Defense</label>
-								<input type = "text" placeholder = "0-31" name = "ev_defense" class = "ev_defense" style="width: 100px">
-							</div>
-
-							<div>
-								<label for="ev_spAttack">Sp. Attack</label>
-								<input type = "text" placeholder = "0-31" name = "ev_spAttack" class = "ev_spAttack" style="width: 100px">
-							</div>
-								<br>
-							<div>
-								<label for="ev_spDefense">Sp. Defense</label>
-								<input type = "text" placeholder = "0-31" name = "ev_spDefense" class = "ev_spDefense" style="width: 100px">
-							</div>
-								<br>
-							<div>
-								<label for="ev_speed">Speed</label>
-								<input type = "text" placeholder = "0-31" name = "ev_speed" class = "ev_speed" style="width: 100px">
-							</div>
-						</div>
-
-						<hr>
-
-						<label>IV: </label><br>
-
-						<div id="iv_list">
-							<div>
-								<label for="iv_hp">HP</label>
-								<input type = "text" placeholder = "0-31" name = "iv_hp" class = "iv_hp" style="width: 100px">
-							</div>
-								<br>
-							<div>
-								<label for="iv_attack">Attack</label>
-								<input type = "text" placeholder = "0-31" name = "iv_attack" class = "iv_attack" style="width: 100px">
-							</div>
-								<br>
-							<div>
-								<label for="iv_defense">Defense</label>
-								<input type = "text" placeholder = "0-31" name = "iv_defense" class = "iv_defense" style="width: 100px">
-							</div>
-
-							<div>
-								<label for="iv_spAttack">Sp. Attack</label>
-								<input type = "text" placeholder = "0-31" name = "iv_spAttack" class = "iv_spAttack" style="width: 100px">
-							</div>
-								<br>
-							<div>
-								<label for="iv_spDefense">Sp. Defense</label>
-								<input type = "text" placeholder = "0-31" name = "iv_spDefense" class = "iv_spDefense" style="width: 100px">
-							</div>
-								<br>
-							<div>
-								<label for="iv_speed">Speed</label>
-								<input type = "text" placeholder = "0-31" name = "iv_speed" class = "iv_speed" style="width: 100px">
-							</div>
-						</div>
-
-						<hr>
-
-						<label>Misc: </label><br>
-
-						<div id="form_div2">
-							<div>
-								<label for="held_item">Held Item</label>
-								<input type = "text" placeholder = "None" name = "held_item" class = "held_item"  style="width: 250px">
-							</div>
-							
-							<div>
-								<table class = "pokemon_shiny">
-									<tr>
-										<td>Shiny</td>
-										<td class = "is_shiny">
-											<select name="is_shiny" id = "is_shiny">
-												<option value="no" class = "choice">No</option>
-												<option value="yes" class = "choice">Yes</option>
-											</select>
-										</td>
-									</tr>
-								</table>
-							</div>
-						</div>
 						<br>
 						<!-- BUTTONS -->
 						<div id="button_div">
 							<div id = "buttons">
+								<div id="delete_button">
+									<a href = "#" id = "delete"><i class="fa fa-trash"></i></a>
+								</div>
 								<a href = "home.html" id = "cancel_button">Cancel</a>
 								<button class="submit" type="submit">Submit</button>
 							</div>
