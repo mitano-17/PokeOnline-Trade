@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="error_display.jsp"></script>
 	</head>
 
 	<body>
@@ -63,14 +65,14 @@
 		</header>
 
 		<!-- ERROR MESSAGES DISPLAY -->
-		<div class="approve_msg">
+		<div id="approve_msg" class="alert" role="alert">
 			<div class="alert_msg">
 				<span class="close_button">&times;</span>
 				<strong>Success!</strong> Submission has been approved. 
 			</div>
 		</div>
 
-		<div class="decline-mg">
+		<div id="decline_msg" class="alert" role="alert">
 			<div class="alert_msg">
 				<span class="close_button">&times;</span>
 				<strong>Success!</strong> Submission has been declined. 
@@ -95,8 +97,14 @@
 					    <td>Bulbasaur</td>
 					    <td>Brendan</td>
 					    <td>
-					    	<button class="approve">Approve</button>
-					    	<button class="reject">Reject</button>
+					    	<button id="approve" class="approve" data-dismiss="alert">Approve</button>
+					    	<button id="reject"  class="reject" data-dismiss="alert">Reject</button>
+					    	<!--
+					    	<button id="alert-trigger" data-dismiss="alert" class="btnClick">
+    							Trigger Alert
+  							</button>
+
+  							<div id="example" class="alert" role="alert">I'm an ALERT !</div>-->
 					    </td>
 				  	</tr>
 
@@ -105,8 +113,8 @@
 					    <td>Squirtle</td>
 					    <td>Lucas</td>
 					    <td>
-					    	<button class="approve">Approve</button>
-					    	<button class="reject">Reject</button>
+					    	<button id="approve" class="approve" data-dismiss="alert">Approve</button>
+					    	<button id="reject"  class="reject" data-dismiss="alert">Reject</button>
 					    </td>
 				  	</tr>
 
@@ -115,8 +123,8 @@
 					    <td>Charmander</td>
 					    <td>Calem</td>
 					    <td>
-					    	<button class="approve">Approve</button>
-					    	<button class="reject">Reject</button>
+					    	<button id="approve" class="approve" data-dismiss="alert">Approve</button>
+					    	<button id="reject"  class="reject" data-dismiss="alert">Reject</button>
 					    </td>
 				  	</tr>
 
@@ -127,19 +135,5 @@
 		<footer>
 			<p>©PokeOnline</p>
 		</footer>
-
-		<!-- DISPLAY ERROR MESSAGES -->
-		<script>
-			var close = document.getElementsByClassName("close_button");
-			var i;
-
-			for (i = 0; i < close.length; i++) {
-			  close[i].onclick = function(){
-			    var div = this.parentElement;
-			    div.style.opacity = "0";
-			    setTimeout(function(){ div.style.display = "none"; }, 600);
-			  }
-			}
-		</script>
 	</body>
 </html>
