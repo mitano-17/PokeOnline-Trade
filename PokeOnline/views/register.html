@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PokeOnline: Trade | Register</title>
+		<link rel="icon" type="image/x-icon" href="./assets/icon.png">
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="slideshow.jsp"></script>
+		<script type="text/javascript" src="upload_avatar.jsp"></script>
+	</head>
+
+	<body>
+		<form action="login.html" method="post" id="login_reg_form" onsubmit="return submitFunction(event)">
+		  <div class="container">
+		  	<div class="logo_image">
+		  		<img src="./assets/logo_w_catchphrase.png">
+		  	</div>
+		  	<input type="text" placeholder="Enter Full Name" name="full_name" required>
+		    <br>
+		    <input type="email" placeholder="Enter Email" name="email" required>
+		    <br>
+		    <input type="tel" placeholder="Enter Phone Number" name="phone" required>
+		    <br>
+		    <input type="password" placeholder="Enter Password" name="psw" required>
+		    <br>
+		    <input type="password" placeholder="Re-Enter Password" name="psw2" required>
+		    <br>
+		    <div class="profile_image">
+		    	<!-- <input type='file' onchange="readURL(this);" name="myfile" id="myfile"/> -->
+		    	<input type='file' name="myfile" id="myfile" accept="image/*" onchange="handleChange(event)"/>
+				<p id="realFileType"></p>
+		    	<label for="myfile">Your Profile Photo:</label><br>
+    			<img id="profile_photo" src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"/>
+		    </div>
+		    <div class="login">
+		    	<p>Already have account? <a href="login.html">Sign In</a></p>
+			</div>
+		    <br>
+		    <button type="submit">Create Account</button>
+		  </div>
+		</form>
+		<footer>
+			<p>©PokeOnline</p>
+		</footer>
+	</body>
+
+	<script>
+		// The script is taken from https://medium.com/frontend-canteen/how-to-detect-file-type-using-javascript-251f67679035, credits go to the author
+		// The script is used to check if the file chosen by the user is an image file
+		function check(headers) {
+    		return (buffers,options={
+        		offset: 0
+    		})=>headers.every((header,index)=>header === buffers[options.offset + index]);
+		}
+
+		function readBuffer(file, start=0, end=2) {
+			return new Promise((resolve,reject)=>{
+				const reader = new FileReader();
+				reader.onload = ()=>{
+					resolve(reader.result);
+				};
+
+				reader.onerror = reject;
+				reader.readAsArrayBuffer(file.slice(start, end));
+			});
+		}
+
+		const isPNG = check([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+		const isJPEG = check([0xff, 0xd8, 0xff]);
+		const realFileElement = document.querySelector("#realFileType");
+		var isSubmittable = false;
+
+		async function handleChange(event) {
+			const file = event.target.files[0];
+			const buffers = await readBuffer(file, 0, 8);
+			const uint8Array = new Uint8Array(buffers);
+			isSubmittable = false;
+			console.log("Changed file")
+			realFileElement.innerText = `${isPNG(uint8Array) ? "" : isJPEG(uint8Array) ? "" : "File chosen is not an image. Please choose a PNG or JPEG file."}`;
+			if (isPNG(uint8Array) || isJPEG(uint8Array)) {
+				readURL(event.target);
+				$('#profile_photo')
+					.attr('src', event.target.result)
+					.width(100)
+					.height(100);
+				isSubmittable = true;
+			}
+			console.log(isSubmittable);
+		}
+
+		// create a function that onSubmit of form, check if the file is an image file, if not, prevent the form from submitting
+		// if it is an image file, submit the form
+		function submitFunction() {
+			if (isSubmittable) {
+				document.getElementById("login_reg_form").submit();
+			} else {
+				alert("Please choose a PNG or JPEG file.");
+				return false;
+			}
+		}
+	</script>
+</html>

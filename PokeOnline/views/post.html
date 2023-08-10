@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PokeOnline: Trade | Submit Pokemon</title>
+		<link rel="icon" type="image/x-icon" href="./assets/icon.png">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="upload_pokemon_image.jsp"></script>
+	</head>
+
+	<body>
+		<header>
+			<!--LEFT-->
+			<div class = "burger_menu">
+				<div id = "nav_menu">
+					<i class="fa fa-bars"></i>
+				</div>
+				<!--BURGER MENU-->
+				<div id ="burger_contents_div">
+					<i class="fa fa-bars"></i>
+					<img src = "./assets/logo_white.png" width = 120px class = "menu_logo">
+					<div id = "burger_contents">
+						<a href="#">Home</a>
+						<a href="#">About Us</a>
+						<a href="#">Contact Us</a>
+						<a href="#">Terms of Service</a>
+						<a href="#">Privacy Policy</a>
+					</div>
+				</div>
+			</div>
+			
+			<a href="#"><img src = "./assets/logo_white.png" width = 120px class = "logo"></a>
+
+			<!--SEARCH BAR-->
+			<form class = "search">
+				<input type = "text" placeholder = "Search..." name = "search_bar" class = "search_box">
+			</form>
+
+			<!--POST BUTTON-->
+			<a href = "post.html" class = "button">Submit</a>
+
+			<!--RIGHT-->
+			<div class = "dropdown_menu">
+				<div id = "user_menu">
+					<h3 id = "username">USERNAME</h3>
+
+					<img src = "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg" id = "profile_photo">
+				</div>
+
+				<!-- DROPDOWN MENU -->
+				<div id ="dropdown_contents">
+					<a href="#">Profile</a>
+					<a href="#">Inventory</a>
+					<a href="#">Wishlist</a>
+					<a href="#">Settings</a>
+					<a href="./login.html">Log out</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- SUBMISSION FORM -->
+		<div class = "display">
+			<!-- HEADER -->
+			<h1>Submit Pokémon</h1>
+
+			<div class = "division">
+				<div class = "left_div">
+					<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.grouphealth.ca%2Fwp-content%2Fuploads%2F2018%2F05%2Fplaceholder-image-300x225.png&f=1&nofb=1&ipt=67d2cffb9b9d43e01c2f5bb8a6847700579528087c92cea23a8bd044e6bc4514&ipo=images" id = "photo_submission">
+
+					<!--BROWSE FILES-->
+					<form action="/action_page.php">
+						<label id="button">
+							<input type="file" id="myfile" name="myfile" onchange="readURL(this);">
+						</label>
+					</form>
+
+					<p class = "reminder" style="margin-top: 10px;">Allowable: JPEG, PNG</p>
+				</div>
+
+				<div class = "right_div">
+					<form class = "submit_form">
+						<label>Details: </label><br>
+						<div id="form_div1">
+							<div>
+								<label for="pokemon_name">Name </label>
+								<input type = "text" placeholder = "i.e. Bulbasaur" name = "pokemon_name" class = "pokemon_name">
+
+								<table class = "pokemon_type_dropdown">
+									<tr>
+										<td>Type 1</td>
+										<td class = "type_1_col">
+											<select name="pokemon_type_1" id = "pokemon_type_1">
+												<option value="grass" class = "choice">Grass</option>
+												<option value="fire" class = "choice">Fire</option>
+												<option value="water" class = "choice">Water</option>
+												<option value="normal" class = "choice">Normal</option>
+												<option value="rock" class = "choice">Rock</option>
+												<option value="poison" class = "choice">Poison</option>
+												<option value="electric" class = "choice">Electric</option>
+												<option value="ground" class = "choice">Ground</option>
+												<option value="flying" class = "choice">Flying</option>
+												<option value="steel" class = "choice">Steel</option>
+												<option value="fighting" class = "choice">Fighting</option>
+												<option value="psychic" class = "choice">Psychic</option>
+												<option value="dark" class = "choice">Dark</option>
+												<option value="ghost" class = "choice">Ghost</option>
+												<option value="ice" class = "choice">Ice</option>
+												<option value="fairy" class = "choice">Fairy</option>
+											</select>
+										</td>
+										<td>Type 2</td>
+										<td class = "type_2_col">
+											<select name="pokemon_type_2" id = "pokemon_type_2">
+												<option value="none" class = "choice">N/A</option>
+												<option value="grass" class = "choice">Grass</option>
+												<option value="fire" class = "choice">Fire</option>
+												<option value="water" class = "choice">Water</option>
+												<option value="normal" class = "choice">Normal</option>
+												<option value="rock" class = "choice">Rock</option>
+												<option value="poison" class = "choice">Poison</option>
+												<option value="electric" class = "choice">Electric</option>
+												<option value="ground" class = "choice">Ground</option>
+												<option value="flying" class = "choice">Flying</option>
+												<option value="steel" class = "choice">Steel</option>
+												<option value="fighting" class = "choice">Fighting</option>
+												<option value="psychic" class = "choice">Psychic</option>
+												<option value="dark" class = "choice">Dark</option>
+												<option value="ghost" class = "choice">Ghost</option>
+												<option value="ice" class = "choice">Ice</option>
+												<option value="fairy" class = "choice">Fairy</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+
+								<label for="pokemon_species">Species </label>
+								<input type = "text" placeholder = "i.e. Seed Pokemon" name = "pokemon_species" class = "pokemon_species">
+							</div>
+
+							<div>
+								<label for="pokemon_abilities">Ability </label>
+								<input type = "text" placeholder = "i.e. Overgrow" name = "pokemon_abilities" class = "pokemon_abilities">
+
+								<table class = "pokemon_gender_dropdown">
+									<tr>
+										<td>Gender</td>
+										<td class = "gender_col">
+											<select name="pokemon_gender" id = "pokemon_gender">
+												<option value="no" class = "choice">Male</option>
+												<option value="yes" class = "choice">Female</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+
+								<label for="pokemon_level">Level </label>
+								<input type = "text" placeholder = "i.e. 12" name = "pokemon_level" class = "pokemon_level">
+							</div>
+						</div>
+
+						<hr>
+
+						<label>Moves: </label><br>
+
+						<div id="moves_list">
+							<div>
+								<label for="pokemon_move_1">Move 1</label>
+								<input type = "text" placeholder = "Move 1" name = "pokemon_move_1" class = "pokemon_move_1" style="margin-bottom: 10px">
+								<br>
+								<label for="pokemon_move_2">Move 2</label>
+								<input type = "text" placeholder = "Move 2" name = "pokemon_move_2" class = "pokemon_move_2">
+							</div>
+
+							<div>
+								<label for="pokemon_move_3">Move 3</label>
+								<input type = "text" placeholder = "Move 3" name = "pokemon_move_3" class = "pokemon_move_3" style="margin-bottom: 10px">
+								<br>
+								<label for="pokemon_move_4">Move 4</label>
+								<input type = "text" placeholder = "Move 4" name = "pokemon_move_4" class = "pokemon_move_4">
+							</div>
+						</div>
+
+						<hr>
+
+						<label>EV: </label><br>
+
+						<div id="ev_list">
+							<div>
+								<label for="ev_hp">HP</label>
+								<input type = "text" placeholder = "0-31" name = "ev_hp" class = "ev_hp" style="width: 100px">
+							</div>
+								<br>
+							<div>
+								<label for="ev_attack">Attack</label>
+								<input type = "text" placeholder = "0-31" name = "ev_attack" class = "ev_attack" style="width: 100px">
+							</div>
+								<br>
+							<div>
+								<label for="ev_defense">Defense</label>
+								<input type = "text" placeholder = "0-31" name = "ev_defense" class = "ev_defense" style="width: 100px">
+							</div>
+
+							<div>
+								<label for="ev_spAttack">Sp. Attack</label>
+								<input type = "text" placeholder = "0-31" name = "ev_spAttack" class = "ev_spAttack" style="width: 100px">
+							</div>
+								<br>
+							<div>
+								<label for="ev_spDefense">Sp. Defense</label>
+								<input type = "text" placeholder = "0-31" name = "ev_spDefense" class = "ev_spDefense" style="width: 100px">
+							</div>
+								<br>
+							<div>
+								<label for="ev_speed">Speed</label>
+								<input type = "text" placeholder = "0-31" name = "ev_speed" class = "ev_speed" style="width: 100px">
+							</div>
+						</div>
+
+						<hr>
+
+						<label>IV: </label><br>
+
+						<div id="iv_list">
+							<div>
+								<label for="iv_hp">HP</label>
+								<input type = "text" placeholder = "0-31" name = "iv_hp" class = "iv_hp" style="width: 100px">
+							</div>
+								<br>
+							<div>
+								<label for="iv_attack">Attack</label>
+								<input type = "text" placeholder = "0-31" name = "iv_attack" class = "iv_attack" style="width: 100px">
+							</div>
+								<br>
+							<div>
+								<label for="iv_defense">Defense</label>
+								<input type = "text" placeholder = "0-31" name = "iv_defense" class = "iv_defense" style="width: 100px">
+							</div>
+
+							<div>
+								<label for="iv_spAttack">Sp. Attack</label>
+								<input type = "text" placeholder = "0-31" name = "iv_spAttack" class = "iv_spAttack" style="width: 100px">
+							</div>
+								<br>
+							<div>
+								<label for="iv_spDefense">Sp. Defense</label>
+								<input type = "text" placeholder = "0-31" name = "iv_spDefense" class = "iv_spDefense" style="width: 100px">
+							</div>
+								<br>
+							<div>
+								<label for="iv_speed">Speed</label>
+								<input type = "text" placeholder = "0-31" name = "iv_speed" class = "iv_speed" style="width: 100px">
+							</div>
+						</div>
+
+						<hr>
+
+						<label>Misc: </label><br>
+
+						<div id="form_div2">
+							<div>
+								<label for="held_item">Held Item</label>
+								<input type = "text" placeholder = "None" name = "held_item" class = "held_item"  style="width: 250px">
+							</div>
+							
+							<div>
+								<table class = "pokemon_shiny">
+									<tr>
+										<td>Shiny</td>
+										<td class = "is_shiny">
+											<select name="is_shiny" id = "is_shiny">
+												<option value="no" class = "choice">No</option>
+												<option value="yes" class = "choice">Yes</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<br>
+						<!-- BUTTONS -->
+						<div id="button_div">
+							<div id = "buttons">
+								<a href = "home.html" id = "cancel_button">Cancel</a>
+								<button class="submit" type="submit">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<p>©PokeOnline</p>
+		</footer>
+	</body>
+</html>
